@@ -49,7 +49,30 @@ $hotels = [
 </head>
 <body>
     <main>
-        var_dump($hotels)
+        <ol>
+            <?php
+            foreach ($hotels as $key => $hotel) {
+                echo "
+            <li>
+                <h2>
+                    {$hotel['name']}
+                </h2>
+                <p>
+                    {$hotel['description']}
+                </p>
+                <span>
+                Parcheggio:
+                    {$hotel['parking']}
+                </span>
+                <p>
+                Distanza dal centro:
+                    {$hotel['distance_to_center']}
+                </p>
+            </li>
+            ";
+            };
+            ?>
+        </ol>
     </main>
 </body>
 </html>
